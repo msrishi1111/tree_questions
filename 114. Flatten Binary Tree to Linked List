@@ -5,6 +5,7 @@ TreeNode * prev = NULL;
         
         flatten(root->right);
         flatten(root->left);
+        
         cout<<root->val;
         root->right = prev;
         root->left = NULL;
