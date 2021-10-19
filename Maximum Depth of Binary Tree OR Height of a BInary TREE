@@ -1,0 +1,10 @@
+////////// Maximum Depth of Binary Tree OR Height of a BInary TREE
+
+ int maxDepth(TreeNode* root) {
+        if(root == NULL)
+            return 0;
+      int left_tree = maxDepth(root->left);
+        int right_tree = maxDepth(root->right);
+        
+         return 1 + max(right_tree,left_tree);
+    }
